@@ -104,8 +104,8 @@ export function Project({
   }
   return (
     <div
-      className={`relative flex flex-col lg:${
-        srNo % 2 === 1 ? "flex-row" : "flex-row-reverse"
+      className={`relative flex flex-col ${
+        srNo % 2 === 1 ? "lg:flex-row" : "lg:flex-row-reverse"
       } items-center lg:h-80 mb-8`}
     >
       <div
@@ -162,8 +162,8 @@ export function Project({
         target="_blank"
         rel="noopener noreferrer"
         ref={scope}
-        className={`lg:absolute lg:top-0 lg:${
-          srNo % 2 === 1 ? "right-0" : "left-0"
+        className={`lg:absolute lg:top-0 ${
+          srNo % 2 === 1 ? "lg:right-0" : "lg:left-0"
         } h-fit sm:h-72 w-fit lg:w-7/12 `}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseExit}
