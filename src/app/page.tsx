@@ -10,7 +10,7 @@ export default function Home() {
           Aditya Kumar
         </h1>
         <p className="pb-6">
-          Hey there, I'm Aditya Kumar, A full stack developer.
+          Hey there, I&apos;m Aditya Kumar, A full stack developer.
         </p>
         <p className="pb-6">
           I excel in crafting exceptional digital experiences across frontend
@@ -55,8 +55,8 @@ export default function Home() {
           Interning at Deloitte India, where I contribute to the Unified Cloud
           Integrator, an advanced tool which streamlines integration development
           with automated processes and enhanced project performance metrics.
-          Currently, I'm also focused on mastering Workday integrations as part
-          of my learning journey.
+          Currently, I&apos;m also focused on mastering Workday integrations as
+          part of my learning journey.
         </p>
       </section>
     </article>

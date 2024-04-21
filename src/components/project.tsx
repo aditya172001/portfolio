@@ -3,7 +3,7 @@
 import { ReactElement, useRef } from "react";
 import { GithubIcon } from "./github-icon";
 import { ExternalLinkIcon } from "./external-link";
-import { motion, useAnimate, useMotionValue, useTime } from "framer-motion";
+import { motion, useAnimate, useTime } from "framer-motion";
 import Link from "next/link";
 
 export function Project({
@@ -31,8 +31,10 @@ export function Project({
   let exitTime = 0;
   let animationStarted = false;
   async function handleMouseEnter() {
+    // @ts-ignore
     if (animationStarted || exitTime + 810 > time.current) return;
     animationStarted = true;
+    // @ts-ignore
     startTime = time.current;
 
     if (videoRef && videoRef.current) {
@@ -45,8 +47,10 @@ export function Project({
 
   async function handleMouseExit() {
     if (!animationStarted) return;
+    // @ts-ignore
     if (startTime + 810 > time.current)
       await new Promise((resolve) =>
+        // @ts-ignore
         setTimeout(resolve, startTime + 810 - time.current)
       );
 
@@ -60,6 +64,7 @@ export function Project({
     }
 
     animationStarted = false;
+    // @ts-ignore
     exitTime = time.current;
   }
   function handleAnimationUpdate(latest: {

@@ -1,11 +1,11 @@
 "use client";
-import { ReactElement, useEffect, useRef } from "react";
+import { LegacyRef, ReactElement, useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export function EyeAnimation(): ReactElement {
   const eyesRef = useRef<HTMLDivElement | null>(null);
-  const leftEyeRef = useRef<SVGElement | null>(null);
-  const rightEyeRef = useRef<SVGElement | null>(null);
+  const leftEyeRef = useRef<any | null>(null);
+  const rightEyeRef = useRef<any | null>(null);
 
   useEffect(() => {
     if (

@@ -27,13 +27,7 @@ export function MyCanvas() {
     const ctx = canvas.getContext("2d")!;
 
     const dpr = window.devicePixelRatio || 1;
-    const bsr =
-      ctx.webkitBackingStorePixelRatio ||
-      ctx.mozBackingStorePixelRatio ||
-      ctx.msBackingStorePixelRatio ||
-      ctx.oBackingStorePixelRatio ||
-      ctx.backingStorePixelRatio ||
-      1;
+    const bsr = 1;
     const dpi = _dpi || dpr / bsr;
 
     canvas.style.width = `${width}px`;
@@ -57,7 +51,7 @@ export function MyCanvas() {
     const canvas = canvasRef.current!;
     const { ctx } = initCanvas(canvas, window.innerWidth, window.innerHeight);
 
-    function step(x: number, y: number, rad: number, counter: 0) {
+    function step(x: number, y: number, rad: number, counter: number | 0) {
       const length = random() * len;
       counter += 1;
 
