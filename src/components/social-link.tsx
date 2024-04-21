@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ReactElement } from "react";
 
 export function SocialLink({
@@ -8,13 +9,13 @@ export function SocialLink({
   children: ReactElement;
 }): ReactElement {
   return (
-    <a
+    <Link
       href={hyperlink}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-gray-500 hover:text-gray-700 transition-all duration-50"
+      className="hover:text-gray-700 transition-all duration-50"
     >
       {children}
-    </a>
+    </Link>
   );
 }

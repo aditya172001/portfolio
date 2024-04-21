@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Tool({
   toolName,
@@ -13,7 +14,7 @@ export function Tool({
   hyperlink: string;
 }): ReactElement {
   return (
-    <a
+    <Link
       href={hyperlink}
       target="_blank"
       rel="noopener noreferrer"
@@ -27,6 +28,6 @@ export function Tool({
         className="h-5 w-5"
       />
       <span className="pl-1">{toolName}</span>
-    </a>
+    </Link>
   );
 }
