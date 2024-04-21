@@ -74,7 +74,7 @@ export function EyeAnimation(): ReactElement {
   }, []);
 
   return (
-    <div ref={eyesRef} className="w-10 h-10 text-black ">
+    <div ref={eyesRef} className="w-10 h-5 text-black">
       <svg viewBox="0 0 34 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g ref={leftEyeRef}>
           <path

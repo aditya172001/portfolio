@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 
 export default function Projects(): ReactElement {
   return (
-    <main className="w-[800px] leading-relaxed">
+    <main className="lg:w-[800px] leading-relaxed">
       <h1 className="text-4xl font-sans font-extrabold mt-8 mb-2 text-black text-center">
         Projects
       </h1>

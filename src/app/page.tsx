@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <article className="w-[660px] leading-relaxed ">
+    <article className="w-96 sm:w-[600px] md:w-[660px] leading-relaxed px-4">
       <section>
-        <h1 className="text-4xl font-sans font-extrabold py-8 text-black">
+        <h1 className="text-4xl font-sans font-extrabold py-6 sm:py-8 text-black">
           Aditya Kumar
         </h1>
         <p className="pb-6">
@@ -32,9 +32,9 @@ export default function Home() {
         </span>
         <ul className="pb-6">
           {Array.from(toolsData.entries()).map(([category, tools]) => (
-            <li key={category} className="flex items-center">
-              {category}:
-              <ul className="flex my-[2px]">
+            <li key={category}>
+              <ul className="flex items-center flex-wrap">
+                <span>{category}:</span>
                 {tools.map((tool) => (
                   <Tool
                     key={tool.toolName}

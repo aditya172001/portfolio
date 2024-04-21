@@ -24,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en ">
       <body className={inter.className}>
-        <div className="relative font-sans text-gray-500 h-screen">
+        <div className="relative font-sans text-gray-500 h-screen px-2 sm:px-0">
           <MyCanvas />
-          <header className="flex items-center justify-between px-8 py-6">
+          <header className="flex items-center justify-between sm:px-8 py-4 sm:py-6">
             <EyeAnimation />
             <nav className="flex backdrop-blur-sm space-x-4 px-4 py-2 rounded-full shadow-lg">
               <Link href="/" className="hover:text-black cursor-pointer">
@@ -81,7 +81,7 @@ export default function RootLayout({
               <hr className="border-t-2 border-gray-500 w-full" />
             </div>
           </div>
-          <div className="grid justify-center p-4">{children}</div>
+          <div className="grid justify-center">{children}</div>
           <nav className="grid lg:hidden pb-4 justify-center">
             <div className="flex justify-between w-40 pb-2">
               <SocialLink hyperlink="https://github.com/aditya172001">
@@ -102,7 +102,7 @@ export default function RootLayout({
             </Link>
           </nav>
           <div className="grid justify-center pb-4">
-            <footer className="text-gray-400 w-[660px]">
+            <footer className="text-gray-400">
               <Link
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
                 target="_blank"

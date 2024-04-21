@@ -18,7 +18,7 @@ export function Tool({
       href={hyperlink}
       target="_blank"
       rel="noopener noreferrer"
-      className=" bg-gray-100 text-gray-500 px-[6px] py-[2px] w-fit rounded-md flex items-center mx-1 hover:bg-gray-200 hover:text-gray-600 cursor-pointer"
+      className=" bg-gray-100 text-gray-500 px-[6px] py-[2px] w-fit rounded-md flex items-center mx-1 hover:bg-gray-200 hover:text-gray-600 cursor-pointer my-[2px]"
     >
       <Image
         src={toolImg}
