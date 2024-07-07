@@ -12,7 +12,7 @@ export function AnimatedEnterDiv({
 }: {
   stagger: number;
   children: ReactNode;
-  className: string;
+  className?: string;
 }): ReactNode {
   return (
     <motion.div
