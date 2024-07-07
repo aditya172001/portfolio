@@ -1,17 +1,20 @@
 import { Tool } from "@/components/tool";
 import { toolsData } from "@/helpers";
 import Link from "next/link";
+import { AnimatedEnterDiv } from "@/components/animated-enter-div";
 
 export default function Home() {
   return (
     <article className="w-96 sm:w-[600px] md:w-[660px] leading-relaxed px-4">
-      <section>
-        <h1 className="text-4xl font-sans font-extrabold py-6 sm:py-8 text-black">
-          Aditya Kumar
-        </h1>
+      <h1 className="text-4xl font-sans font-extrabold py-6 sm:py-8 text-black dark:text-white">
+        Aditya Kumar
+      </h1>
+      <AnimatedEnterDiv stagger={0}>
         <p className="pb-6">
           Hey there, I&apos;m Aditya Kumar, A full stack developer.
         </p>
+      </AnimatedEnterDiv>
+      <AnimatedEnterDiv stagger={1}>
         <p className="pb-6">
           I excel in crafting exceptional digital experiences across frontend
           and backend technologies, including ReactJS, NextJS, NodeJS, and AWS.
@@ -19,14 +22,14 @@ export default function Home() {
           solutions that leave a lasting impact.{" "}
           <Link
             href="/projects"
-            className="text-gray-900 border-b-[1px] hover:border-gray-900 cursor-pointer transition-all duration-500"
+            className="text-neutral-900 dark:text-neutral-200 border-b-[1px] border-neutral-200 hover:border-neutral-700 dark:border-neutral-700 dark:hover:border-neutral-200 cursor-pointer transition-all  hover:duration-500"
           >
             Explore my projects{" "}
           </Link>
           to witness my work firsthand.
         </p>
-      </section>
-      <section>
+      </AnimatedEnterDiv>
+      <AnimatedEnterDiv stagger={2}>
         <span className="">
           Here are a few technologies I’ve been working with recently:
         </span>
@@ -48,8 +51,8 @@ export default function Home() {
             </li>
           ))}
         </ul>
-      </section>
-      <section className="pb-6">
+      </AnimatedEnterDiv>
+      <AnimatedEnterDiv stagger={3} className="pb-6">
         <h2 className="pb-1">Experience:</h2>
         <p>
           Interning at Deloitte India, where I contribute to the Unified Cloud
@@ -58,7 +61,7 @@ export default function Home() {
           Currently, I&apos;m also focused on mastering Workday integrations as
           part of my learning journey.
         </p>
-      </section>
+      </AnimatedEnterDiv>
     </article>
   );
 }

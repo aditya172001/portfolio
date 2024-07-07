@@ -13,7 +13,7 @@ export function SocialLink({
       href={hyperlink}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:text-gray-700 transition-all duration-50"
+      className="hover:text-neutral-700 dark:hover:text-neutral-200 transition-all duration-50"
     >
       {children}
     </Link>

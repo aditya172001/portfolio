@@ -6,7 +6,7 @@ export function MyCanvas() {
   const r90 = Math.PI / 2;
   const r15 = Math.PI / 12;
   const color = "#888888";
-  const MIN_BRANCH = 7;
+  const MIN_BRANCH = 8;
   const len = 6;
   const { random } = Math;
 
@@ -72,7 +72,7 @@ export function MyCanvas() {
         ny > size.height + 100
       )
         return;
-      const rate = counter <= MIN_BRANCH ? 0.8 : 0.5;
+      const rate = counter <= MIN_BRANCH ? 0.7 : 0.5;
 
       if (random() < rate)
         steps.current = [...steps.current, () => step(nx, ny, rad1, counter)];
@@ -82,7 +82,7 @@ export function MyCanvas() {
 
     steps.current = [];
     ctx.clearRect(0, 0, size.width, size.height);
-    ctx.lineWidth = 0.1;
+    ctx.lineWidth = 0.2;
     ctx.strokeStyle = color;
     steps.current = [
       () => step(random() * window.innerWidth, -5, r90, 0),
@@ -122,9 +122,9 @@ export function MyCanvas() {
   }, [size.height, size.width, r15, r90, r180, random]);
 
   return (
-    <div className="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden z-[-1] bg-white">
-      <div className="w-full h-full absolute inset-0 bg-gradient-radial from-white to-transparent z-[-1] blur-lg" />
-
+    <div>
+      <div className="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden z-[-3] bg-white dark:bg-black" />
+      <div className="w-full h-full absolute inset-0 bg-gradient-radial from-white dark:from-black to-transparent z-[-1] blur-lg" />
       <canvas
         ref={canvasRef}
         width="400"

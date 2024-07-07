@@ -120,20 +120,20 @@ export function Project({
             href="https://algo-hub.adityastack.dev"
             target="_blank"
             rel="noopener noreferrer"
-            className=" text-xl text-black font-semibold"
+            className=" text-xl text-black font-semibold dark:text-white"
           >
             {title}
           </Link>
         </h3>
         <div
-          className={`lg:w-[466px] bg-white shadow-lg rounded-md p-3 mb-3 ${
+          className={`lg:w-[466px] bg-white dark:bg-neutral-950 shadow-lg rounded-md p-3 mb-3 ${
             srNo % 2 === 1 ? "start-0 text-left" : "end-0 lg:text-right"
           }`}
         >
           <p>{description}</p>
         </div>
         <ul
-          className={`flex flex-wrap mb-3 w-3/4 lg:w-80 text-gray-400 ${
+          className={`flex flex-wrap mb-3 w-3/4 lg:w-80 text-neutral-400 ${
             srNo % 2 === 1 ? " justify-start" : " lg:justify-end"
           }`}
         >
@@ -150,10 +150,10 @@ export function Project({
         </ul>
         <div className="flex bg-red items-center mb-2 lg:mb-0">
           <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-            <GithubIcon className="w-6 h-6 hover:text-gray-700 transition-all duration-50 mr-1" />
+            <GithubIcon className="w-6 h-6 hover:text-neutral-700 dark:hover:text-neutral-200 transition-all duration-50 mr-1" />
           </Link>
           <Link href={liveLink} target="_blank" rel="noopener noreferrer">
-            <ExternalLinkIcon className="w-6 h-6 hover:text-gray-700 transition-all duration-50" />
+            <ExternalLinkIcon className="w-6 h-6 hover:text-neutral-700 dark:hover:text-neutral-200 transition-all duration-50" />
           </Link>
         </div>
       </div>
@@ -174,7 +174,7 @@ export function Project({
           src={demoVid}
           loop
           muted
-          className="w-full h-full object-cover rounded-md border border-gray-250 hover:cursor-pointer"
+          className="w-full h-full object-cover rounded-md border border-neutral-250 dark:border-neutral-800 hover:cursor-pointer"
         />
       </motion.a>
     </div>

@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "selector",
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -10,11 +10,27 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      clipPath: {
+        circle: "circle(50%)",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: any) {
+      addUtilities({
+        ".clip-circle": {
+          "clip-path": "circle(1% at 96.2% 5.3%)",
+        },
+        ".clip-circle-expand": {
+          "clip-path": "circle(140% at 96.2% 5.3%)",
+        },
+        ".clip-path-transition": {
+          transition: "clip-path 1s",
+        },
+      });
+    },
+  ],
 };
+
 export default config;
