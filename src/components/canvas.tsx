@@ -123,8 +123,8 @@ export function MyCanvas() {
 
   return (
     <div>
-      <div className="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden z-[-3] bg-white dark:bg-black" />
-      <div className="w-full h-full absolute inset-0 bg-gradient-radial from-white dark:from-black to-transparent z-[-1] blur-lg" />
+      <div className="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden z-[-3] bg-white dark:bg-black duration-300" />
+      <div className="w-full h-full absolute inset-0 bg-gradient-radial from-white dark:from-black to-transparent z-[-1] blur-lg duration-300" />
       <canvas
         ref={canvasRef}
         width="400"

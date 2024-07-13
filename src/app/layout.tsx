@@ -8,8 +8,8 @@ import { LinkedInIcon } from "@/components/linkedin-icon";
 import { MyCanvas } from "@/components/canvas";
 import { EyeAnimation } from "@/components/eye-animation";
 import Link from "next/link";
-import { ThemeWrapper } from "@/components/theme-wrapper";
 import { ThemeSwitchButton } from "@/components/theme-switch-button";
+import { Providers } from "@/components/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en ">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeWrapper>
+        <Providers>
           <div className="relative font-sans text-neutral-500 dark:text-neutral-400 h-screen px-2 sm:px-0">
             <MyCanvas />
             <header className="flex items-center justify-between sm:px-8 py-4 sm:py-6">
@@ -122,7 +122,7 @@ export default function RootLayout({
               </footer>
             </div>
           </div>
-        </ThemeWrapper>
+        </Providers>
       </body>
     </html>
   );

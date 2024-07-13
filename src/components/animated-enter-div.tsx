@@ -1,9 +1,7 @@
 "use client";
 
-import { CSSProperties, ReactNode } from "react";
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { NodeProps } from "postcss";
-import { InferGetStaticPropsType } from "next";
 
 export function AnimatedEnterDiv({
   stagger,

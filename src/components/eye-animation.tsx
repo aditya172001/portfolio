@@ -1,5 +1,5 @@
 "use client";
-import { LegacyRef, ReactElement, useEffect, useRef } from "react";
+import { ReactElement, useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export function EyeAnimation(): ReactElement {

@@ -22,7 +22,7 @@ export default function Home() {
           solutions that leave a lasting impact.{" "}
           <Link
             href="/projects"
-            className="text-neutral-900 dark:text-neutral-200 border-b-[1px] border-neutral-200 hover:border-neutral-700 dark:border-neutral-700 dark:hover:border-neutral-200 cursor-pointer transition-all  hover:duration-500"
+            className="text-neutral-900 dark:text-neutral-200 border-b-[1px] border-neutral-200 hover:border-neutral-700 dark:border-neutral-700 dark:hover:border-neutral-200 cursor-pointer transition-all duration-0 hover:duration-500"
           >
             Explore my projects{" "}
           </Link>
